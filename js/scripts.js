@@ -1,3 +1,4 @@
+// variable containing array of objects with data of different pokemon
 let pokemonList = [
   {
     name: 'Sandslash',
@@ -15,3 +16,12 @@ let pokemonList = [
     types: ['grass']
   }
 ];
+
+let pokemonOneName = pokemonList[0].name;
+//console.log(pokemonOneName);
+
+let pokemonTwoName = pokemonList[1].name;
+//console.log(pokemonTwoName);
+
+let pokemonThreeName = pokemonList[2].name;
+//console.log(pokemonThreeName);

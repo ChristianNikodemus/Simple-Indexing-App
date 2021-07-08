@@ -1,17 +1,17 @@
 let pokemonList = [
   {
-    name: '',
-    height:,
-    types: []
+    name: 'Sandslash',
+    height: 1,
+    types: ['ground']
   },
   {
-    name: '',
-    height:,
-    types: []
+    name: 'Noctowl',
+    height: 1.6,
+    types: ['flying','normal']
   },
   {
-    name: '',
-    height:,
-    types: []
+    name: 'Tangrowth',
+    height: 2,
+    types: ['grass']
   }
 ];

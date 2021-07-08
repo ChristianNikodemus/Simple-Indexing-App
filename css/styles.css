@@ -1,4 +1,29 @@
+:root {
+  --font-stack-primary: 'Lato', sans-serif;
+  --font-stack-secondary: 'Roboto', serif;
+  --primary-color: #374A57;
+  --background-color: #BADFFA;
+  --secondary-background-color: #FAD3D2;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-stack-primary);
+  font-weight: 400;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  color: var(--primary-color);
+  /* Sets all text color*/
+}
+
 .pokeList {
   text-align: center;
   font-size: 20px;
+  margin-top: 20px;
 }

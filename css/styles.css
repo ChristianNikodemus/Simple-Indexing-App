@@ -1,11 +1,11 @@
 :root {
   --font-stack-primary: 'Lato', sans-serif;
   --font-stack-secondary: 'Roboto', serif;
-  --primary-color: #0081A7;
-  --secondary-color: #00afb9;
-  --alert-color: #f07167;
-  --background-color: #FDFCDC;
-  --secondary-background-color: #FED9B7;
+  --primary-color: #588b8b;
+  --secondary-color: #f28f3b;
+  --alert-color: #c8553d;
+  --background-color: #ffffff;
+  --secondary-background-color: #ffd5c2;
 }
 
 * {

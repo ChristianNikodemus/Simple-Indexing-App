@@ -17,12 +17,8 @@ let pokemonList = [
   }
 ];
 
-// I've added these variables to access data within the pokemonList
-// Name of first pokemon:
-let pokemonOneName = pokemonList[0].name;
-
-// Name of second pokemon:
-let pokemonTwoName = pokemonList[1].name;
-
-// Name of third pokemon:
-let pokemonThreeName = pokemonList[2].name;
+// This is a loop that loops through the pokemonList objects
+// and writes their name and height to the index.html page
+for (let i=0; i < pokemonList.length; i++) {
+  document.write(`<li>${pokemonList[i].name} (height: ${pokemonList[i].height})</li>`)
+}

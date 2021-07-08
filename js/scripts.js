@@ -18,17 +18,11 @@ let pokemonList = [
 ];
 
 // I've added these variables to access data within the pokemonList
-
+// Name of first pokemon:
 let pokemonOneName = pokemonList[0].name;
-//console.log(pokemonOneName);
 
+// Name of second pokemon:
 let pokemonTwoName = pokemonList[1].name;
-//console.log(pokemonTwoName);
 
+// Name of third pokemon:
 let pokemonThreeName = pokemonList[2].name;
-//console.log(pokemonThreeName);
-
-// These console logs check the type of value for the heights of the pokemon
-//console.log(typeof pokemonList[0].height);
-//console.log(typeof pokemonList[1].height);
-//console.log(typeof pokemonList[2].height);

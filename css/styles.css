@@ -2,6 +2,8 @@
   --font-stack-primary: 'Lato', sans-serif;
   --font-stack-secondary: 'Roboto', serif;
   --primary-color: #0081A7;
+  --secondary-color: #00afb9;
+  --alert-color: #f07167;
   --background-color: #FDFCDC;
   --secondary-background-color: #FED9B7;
 }
@@ -20,11 +22,26 @@ body {
   /* Sets the line-height to 1.6 */
   color: var(--primary-color);
   /* Sets all text color*/
+  text-align: center;
+  background-color: var(--background-color);
+
+}
+
+h1 {
+  font-family: var(--font-stack-secondary);
+  font-weight: 500;
+  color: var(--secondary-color);
 }
 
 .pokeList {
-  text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 1.5em;
   list-style-type: none;
+}
+
+.pokeList p {
+  font-size: 0.5em;
+  list-style-type: none;
+  color: var(--alert-color);
+
 }

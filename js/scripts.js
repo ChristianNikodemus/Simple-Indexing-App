@@ -23,7 +23,7 @@ for (let i=0; i < pokemonList.length; i++) {
   if (pokemonList[i].height >=2){
 // This adds the comment "Wow, that's big!" beside the pokemon
 // if their height is greater than 2
-    document.write(`<li class="pokeList">${pokemonList[i].name} (height: ${pokemonList[i].height}) - Wow, that's big!</li>`)
+    document.write(`<li class="pokeList">${pokemonList[i].name} (height: ${pokemonList[i].height}) <br/><p>Wow, that's big!<p></li>`)
   } else {
     document.write(`<li class="pokeList">${pokemonList[i].name} (height: ${pokemonList[i].height})</li>`)
   }

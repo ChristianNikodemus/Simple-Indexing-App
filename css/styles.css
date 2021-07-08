@@ -5,7 +5,7 @@
   --secondary-color: #f28f3b;
   --alert-color: #c8553d;
   --background-color: #ffffff;
-  --secondary-background-color: #ffd5c2;
+  --secondary-background-color: #FFEDE6;
 }
 
 * {
@@ -31,6 +31,12 @@ h1 {
   font-family: var(--font-stack-secondary);
   font-weight: 500;
   color: var(--secondary-color);
+  margin: 0;
+}
+
+.header {
+  padding: 1em;
+  background: var(--secondary-background-color);
 }
 
 .pokeList {
@@ -43,5 +49,4 @@ h1 {
   font-size: 0.5em;
   list-style-type: none;
   color: var(--alert-color);
-
 }

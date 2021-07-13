@@ -18,15 +18,6 @@ let pokemonList = [
 ];
 
 // This is a loop that loops through the pokemonList objects and writes their name and height to the index.html page
-/*
-for (let i=0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height >=2){
-    document.write(`<li class="pokeList">${pokemonList[i].name} (height: ${pokemonList[i].height})<br/><p>Wow, that's big!<p></li>`)
-  } else {
-    document.write(`<li class="pokeList">${pokemonList[i].name} (height: ${pokemonList[i].height})</li>`)
-  }
-}
-*/
 
 pokemonList.forEach(function(pokemon) {
   if (pokemon.height >=2){

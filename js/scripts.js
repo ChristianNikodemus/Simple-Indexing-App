@@ -32,7 +32,10 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonList.forEach(function(pokemon) {
+// Added Charizard to my pokemonList
+pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
+
+pokemonRepository.forEach(function(pokemon) {
   if (pokemon.height >=2){
     document.write(`<li class="pokeList">${pokemon.name} (height: ${pokemon.height})<br/><p>Wow, that's big!<p></li>`)
   } else {

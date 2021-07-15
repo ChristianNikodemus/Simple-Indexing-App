@@ -39,6 +39,10 @@ h1 {
   background: var(--secondary-background-color);
 }
 
+.pokemon-list {
+  list-style-type: none;
+}
+
 .my-button {
   color: var(--primary-color);
   font-size: 1.5em;

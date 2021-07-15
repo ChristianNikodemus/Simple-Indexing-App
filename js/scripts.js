@@ -38,11 +38,14 @@ pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying']
 
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  let inputs = document.querySelector('pokemon-list');
+  let container = document.querySelector('.pokemon-list');
   let listItem = document.createElement('li');
   let button = document.createElement('button');
-  button.innerText = document.write(`${pokemon.name}`);
+  button.innerText = pokemon.name;
   button.classList.add('my-button');
+  listItem.appendChild(button);
+  container.appendChild(listItem);
+
 /*
    if (pokemon.height >=2){
     document.write(`<li class="pokeList">${pokemon.name} (height: ${pokemon.height})<br/><p>Wow, that's big!<p></li>`)

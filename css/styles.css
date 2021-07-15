@@ -1,13 +1,19 @@
 :root {
-  /* Colours selected from Coloor (https://coolors.co/588b8b-ffffff-ffd5c2-f28f3b-c8553d)*/
+  /* Colours selected from Coloor (https://coolors.co/0081a7-00afb9-fdfcdc-fed9b7-f07167)*/
   --font-stack-primary: 'Lato', sans-serif;
   --font-stack-secondary: 'Roboto', serif;
   --primary-color: #0081a7;
+  /* Dark blue */
   --secondary-color: #00afb9;
+  /* Turquouise */
   --background-color: #ffffff;
+  /* White */
   --secondary-background-color: #fed9b7;
+  /* Light orange */
   --third-background-color: #f07167;
   /* Dark red */
+  --fourth-background-color: #fdfcdc;
+  /* Light yellow */
 }
 
 * {

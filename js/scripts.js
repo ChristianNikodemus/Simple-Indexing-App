@@ -42,6 +42,7 @@ pokemonRepository.getAll().forEach(function(pokemon) {
   let listItem = document.createElement('li');
   let button = document.createElement('button');
   button.innerText = document.write(`${pokemon.name}`);
+  button.classList.add('my-button')
 /*
    if (pokemon.height >=2){
     document.write(`<li class="pokeList">${pokemon.name} (height: ${pokemon.height})<br/><p>Wow, that's big!<p></li>`)

@@ -1,11 +1,13 @@
 :root {
+  /* Colours selected from Coloor (https://coolors.co/588b8b-ffffff-ffd5c2-f28f3b-c8553d)*/
   --font-stack-primary: 'Lato', sans-serif;
   --font-stack-secondary: 'Roboto', serif;
-  --primary-color: #588b8b;
-  --secondary-color: #f28f3b;
-  --alert-color: #c8553d;
+  --primary-color: #0081a7;
+  --secondary-color: #00afb9;
   --background-color: #ffffff;
-  --secondary-background-color: #FFEDE6;
+  --secondary-background-color: #fed9b7;
+  --third-background-color: #f07167;
+  /* Dark red */
 }
 
 * {
@@ -30,7 +32,7 @@ body {
 h1 {
   font-family: var(--font-stack-secondary);
   font-weight: 500;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin: 0;
 }
 
@@ -41,16 +43,19 @@ h1 {
 
 .pokemon-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0 5em;
 }
 
 .my-button {
-  color: var(--primary-color);
+  width: 100%;
+  color: var(--background-color);
   font-size: 1.5em;
   font-family: inherit;
   margin-top: 1em;
   border: none;
   display: inline-block;
-  background-color: var(--secondary-background-color);
+  background-color: var(--third-background-color);
   text-decoration: none;
   padding: 0.5em;
   border-radius: 0.5em;

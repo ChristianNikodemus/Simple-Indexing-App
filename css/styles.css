@@ -52,5 +52,24 @@ h1 {
 }
 
 .my-button {
-  
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--secondary-background-color);
+  text-decoration: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  /* Transitions */
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.my-button:hover,
+.my-button:focus {
+  cursor: pointer;
+  opacity: 0.8;
 }

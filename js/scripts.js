@@ -1,7 +1,13 @@
 // variable containing array of objects with data of different pokemon wrapped in a IIFE
 let pokemonRepository = (function () {
   function addListItem(pokemon) {
-
+    let container = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('my-button');
+    listItem.appendChild(button);
+    container.appendChild(listItem);
   }
 
   let pokemonList = [
@@ -42,13 +48,7 @@ pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying']
 
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  let container = document.querySelector('.pokemon-list');
-  let listItem = document.createElement('li');
-  let button = document.createElement('button');
-  button.innerText = pokemon.name;
-  button.classList.add('my-button');
-  listItem.appendChild(button);
-  container.appendChild(listItem);
+
 
 /*
    if (pokemon.height >=2){

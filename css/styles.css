@@ -72,10 +72,13 @@ h1 {
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
+  transition: transform .3s cubic-bezier(.38,.41,.27,1) 0s,
+  -webkit-transform .3s cubic-bezier(.38,.41,.27,1) 0s;
 }
 
 .my-button:hover,
 .my-button:focus {
   cursor: pointer;
   opacity: 0.8;
+  transform: scale(1.05);
 }

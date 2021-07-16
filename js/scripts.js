@@ -48,13 +48,4 @@ pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying']
 
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-
-
-/*
-   if (pokemon.height >=2){
-    document.write(`<li class="pokeList">${pokemon.name} (height: ${pokemon.height})<br/><p>Wow, that's big!<p></li>`)
-  } else {
-    document.write(`<li class="pokeList">${pokemon.name} (height: ${pokemon.height})</li>`)
-  }
-*/
 });

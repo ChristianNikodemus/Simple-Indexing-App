@@ -1,5 +1,9 @@
 // variable containing array of objects with data of different pokemon wrapped in a IIFE
 let pokemonRepository = (function () {
+  function addListItem(pokemon) {
+
+  }
+
   let pokemonList = [
     {
       name: 'Sandslash',

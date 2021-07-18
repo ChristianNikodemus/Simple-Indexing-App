@@ -37,7 +37,7 @@ let pokemonRepository = (function () {
     container.appendChild(listItem);
 
     // Event listener for when a user clicks a button
-    button.addEventListener('click', function (pokemon) {
+    button.addEventListener('click', function () {
       showDetails(pokemon);
     });
   }

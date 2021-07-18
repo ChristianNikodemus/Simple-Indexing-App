@@ -37,6 +37,10 @@ let pokemonRepository = (function () {
     container.appendChild(listItem);
   }
 
+  function showDetails() {
+    
+  }
+
   return {
     add: add,
     getAll: getAll,

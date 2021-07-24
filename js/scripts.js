@@ -61,6 +61,12 @@ function loadDetails(item) {
   });
 }
 
+function showDetails(pokemon) {
+  loadDetails(pokemon).then(function () {
+    console.log(pokemon);
+  });
+}
+
 return {
   add: add,
   getAll: getAll,

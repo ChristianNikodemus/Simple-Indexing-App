@@ -31,14 +31,30 @@ let pokemonRepository = (function () {
     console.log(pokemon);
   }
 
-  return {
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    showDetails: showDetails
-  };
-})();
+  function loadList() {
+    return fetch(apiUrl).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    json.results.forEach(function (item) {
+      let pokemon = {
+        name: item.name,
+        detailsUrl: item.url
+      };
+      add(pokemon);
+    });
+  }).catch(function (e) {
+    console.error(e);
+  })
+}
 
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem,
+  showDetails: showDetails,
+  loadList: loadList
+};
+})();
 
 // Added Charizard to my pokemonList
 pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });

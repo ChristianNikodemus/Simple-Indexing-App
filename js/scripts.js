@@ -3,8 +3,7 @@ let pokemonRepository = (function () {
 
   let pokemonList = [];
 
-  const fetch = require("node-fetch");
-  let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // API for list of pokemons
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/'; // API for list of pokemons
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -88,6 +87,7 @@ pokemonRepository.loadList().then(function () {
 
 // Added Charizard to my pokemonList
 // pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
+
 
 pokemonRepository.getAll().forEach(function(pokemon) {
   pokemonRepository.addListItem(pokemon);

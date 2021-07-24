@@ -3,6 +3,8 @@ let pokemonRepository = (function () {
 
   let pokemonList = [];
 
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+
   function add(pokemon) {
     pokemonList.push(pokemon);
   }

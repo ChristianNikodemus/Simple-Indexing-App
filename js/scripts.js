@@ -57,11 +57,6 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonRepository.loadList().then(function () {
-  pokemonRepository.getAll().forEach(function (pokemon) {
-    pokemonRepository.addListItem(pokemon);
-  });
-});
 
 // Added Charizard to my pokemonList
 pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });

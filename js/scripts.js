@@ -62,14 +62,21 @@ let pokemonRepository = (function () {
   });
 }
 
-  return {
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    showDetails: showDetails,
-    loadList: loadList,
-    loadDetails:loadDetails
-  };
+function showDetails(pokemon) {
+  loadDetails(pokemon).then(function () {
+    console.log(pokemon);
+  });
+}
+
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem,
+  showDetails: showDetails,
+  loadList: loadList,
+  loadDetails:loadDetails,
+  showDetails: showDetails
+};
 })();
 
 pokemonRepository.loadList().then(function () {

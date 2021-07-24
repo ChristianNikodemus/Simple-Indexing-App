@@ -1,23 +1,7 @@
 // variable containing array of objects with data of different pokemon wrapped in a IIFE
 let pokemonRepository = (function () {
 
-  let pokemonList = [
-    {
-      name: 'Sandslash',
-      height: 1,
-      types: ['ground']
-    },
-    {
-      name: 'Noctowl',
-      height: 1.6,
-      types: ['flying','normal']
-    },
-    {
-      name: 'Tangrowth',
-      height: 2,
-      types: ['grass']
-    }
-  ];
+  let pokemonList = [];
 
   function add(pokemon) {
     pokemonList.push(pokemon);

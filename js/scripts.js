@@ -57,7 +57,7 @@ return {
 })();
 
 // Added Charizard to my pokemonList
-pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
+// pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
 
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon){

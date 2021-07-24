@@ -3,7 +3,7 @@ let pokemonRepository = (function () {
 
   let pokemonList = [];
 
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/'; // API for list of pokemons
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -32,28 +32,11 @@ let pokemonRepository = (function () {
     console.log(pokemon);
   }
 
-  function loadList() {
-    return fetch(apiURL).then(function (response) {
-      return response.json();
-    }).then(function (json) {
-      json.results.forEach(function (item) {
-        let pokemon = {
-          name: item.name,
-          detailsUrl: item.url
-        };
-        add(pokemon);
-      });
-    }).catch(function (e) {
-      console.error(e);
-    })
-  }
-
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    showDetails: showDetails,
-    loadList: loadList
+    showDetails: showDetails
   };
 })();
 

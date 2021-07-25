@@ -86,6 +86,11 @@ h1 {
 
 /* Styling for the Modal */
 #modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  display: block;
   position: fixed;
   padding: 20px;
   box-sizing: border-box;

@@ -125,6 +125,8 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
+let modalContainer = document.querySelector('#modal-container'); // redefined the variable so that it can be used in the global scope
+
 modalContainer.addEventListener('click', (e) => {
   // Since this is also triggered when clicking INSIDE the modal
   // We only want to close if the user clicks directly on the overlay

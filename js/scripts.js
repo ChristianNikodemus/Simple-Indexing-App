@@ -1,9 +1,9 @@
 // variable containing array of objects with data of different pokemon wrapped in a IIFE
 let pokemonRepository = (function () {
 
-  let pokemonList = [];
+  let pokemonList = []; // Pokemon array
 
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // Pokemon API
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -58,12 +58,6 @@ function loadDetails(item) {
   });
 }
 
-function showDetails(pokemon) {
-  loadDetails(pokemon).then(function () {
-    console.log(pokemon);
-  });
-}
-
 // Modal functionality
 let modalContainer = document.querySelector('#modal-container'); // defines the modal container globally
 
@@ -113,6 +107,12 @@ modalContainer.addEventListener('click', (e) => { // Event listener for user cli
 document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
+
+function showDetails(pokemon) {
+  loadDetails(pokemon).then(function () {
+    console.log(pokemon);
+  });
+}
 
 return {
   add: add,

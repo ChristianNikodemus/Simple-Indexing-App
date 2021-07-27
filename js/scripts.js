@@ -64,25 +64,6 @@ function showDetails(pokemon) {
   });
 }
 
-return {
-  add: add,
-  getAll: getAll,
-  addListItem: addListItem,
-  showDetails: showDetails,
-  loadList: loadList,
-  loadDetails: loadDetails
-};
-})();
-
-// Added Charizard to my pokemonList
-// pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
-
-pokemonRepository.loadList().then(function() {
-  pokemonRepository.getAll().forEach(function(pokemon){
-    pokemonRepository.addListItem(pokemon);
-  });
-});
-
 // Modal functionality
 let modalContainer = document.querySelector('#modal-container'); // defines the modal container globally
 
@@ -131,4 +112,25 @@ modalContainer.addEventListener('click', (e) => { // Event listener for user cli
 
 document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
+});
+
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem,
+  showDetails: showDetails,
+  loadList: loadList,
+  loadDetails: loadDetails,
+  showModal: showModal,
+  hideModal: hideModal
+};
+})();
+
+// Added Charizard to my pokemonList
+// pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
+
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon){
+    pokemonRepository.addListItem(pokemon);
+  });
 });

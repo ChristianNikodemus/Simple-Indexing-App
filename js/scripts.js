@@ -84,11 +84,10 @@ pokemonRepository.loadList().then(function() {
 });
 
 // Modal functionality
-function showModal(title, text) {
-  let modalContainer = document.querySelector('#modal-container');
+let modalContainer = document.querySelector('#modal-container'); // defines the modal container globally
 
-  // Clears all the existing modal content
-  modalContainer.innerHTML = '';
+function showModal(title, text) {
+  modalContainer.innerHTML = ''; // Clears all the existing modal content
 
   let modal = document.createElement('div');
   modal.classList.add('modal');
@@ -114,22 +113,16 @@ function showModal(title, text) {
 }
 
 function hideModal() {
-  let modalContainer = document.querySelector('#modal-container');
   modalContainer.classList.remove('is-visible');
 }
 
 window.addEventListener('keydown', (e) => {
-  let modalContainer = document.querySelector('#modal-container');
   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
     hideModal();
   }
 });
 
-let modalContainer = document.querySelector('#modal-container'); // redefined the variable so that it can be used in the global scope
-
-modalContainer.addEventListener('click', (e) => {
-  // Since this is also triggered when clicking INSIDE the modal
-  // We only want to close if the user clicks directly on the overlay
+modalContainer.addEventListener('click', (e) => { // Event listener for user clicking outside the modal
   let target = e.target;
   if (target === modalContainer) {
     hideModal();

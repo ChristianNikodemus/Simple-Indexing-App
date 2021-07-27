@@ -44,6 +44,7 @@ h1 {
 .header {
   padding: 1em;
   background: var(--secondary-background-color);
+  margin-bottom: 0.5em;
 }
 
 .pokemon-list {
@@ -57,7 +58,8 @@ h1 {
   color: var(--background-color);
   font-size: 1.5em;
   font-family: inherit;
-  margin-top: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   border: none;
   display: inline-block;
   background-color: var(--third-background-color);

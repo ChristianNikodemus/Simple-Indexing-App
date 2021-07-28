@@ -61,7 +61,7 @@ function loadDetails(item) {
 // Modal functionality
 let modalContainer = document.querySelector('#modal-container'); // defines the modal container globally
 
-function showModal(title, text) {
+function showModal(title, text, image) {
   modalContainer.innerHTML = ''; // Clears all the existing modal content
 
   let modal = document.createElement('div');
@@ -79,9 +79,13 @@ function showModal(title, text) {
   let contentElement = document.createElement('p');
   contentElement.innerText = text;
 
+  let myImage = document.createElement('img');
+  myImage.src = image;
+
   modal.appendChild(closeButtonElement);
   modal.appendChild(titleElement);
   modal.appendChild(contentElement);
+  modal.appendChild(myImage);
   modalContainer.appendChild(modal);
 
   modalContainer.classList.add('is-visible');
@@ -111,7 +115,7 @@ document.querySelector('#show-modal').addEventListener('click', () => {
 function showDetails(pokemon) {
   loadDetails(pokemon).then(function () {
     console.log(pokemon);
-    showModal(pokemon.name,`Height: ${pokemon.height}`);
+    showModal(pokemon.name,`Height: ${pokemon.height}`, pokemon.imageUrl);
   });
 }
 

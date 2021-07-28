@@ -75,6 +75,7 @@ h1 {
   transition-property: opacity;
   transition: transform .3s cubic-bezier(.38,.41,.27,1) 0s,
   -webkit-transform .3s cubic-bezier(.38,.41,.27,1) 0s;
+  text-transform: capitalize;
 }
 
 .my-button:hover,
@@ -124,6 +125,7 @@ h1 {
   text-align: center;
   border-radius: 0.5em;
   background-color: var(--background-color);
+  text-transform: capitalize;
 }
 
 .modal-close {

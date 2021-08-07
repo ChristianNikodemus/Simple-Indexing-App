@@ -94,7 +94,7 @@ h1 {
 
 #modal-container.is-visible {
   display: block;
-  position: fixed;
+  /* position: fixed; */
   padding: 20px;
   box-sizing: border-box;
   top: 0;

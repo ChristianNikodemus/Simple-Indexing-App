@@ -3,7 +3,7 @@ let pokemonRepository = (function () {
 
   let pokemonList = []; // Pokemon array
 
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // Pokemon API
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=5'; // Pokemon API
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -17,9 +17,9 @@ let pokemonRepository = (function () {
     let container = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let button = document.createElement('button');
-    $('button').addClass('my-button');
-    $('button').addClass('btn');
     $('listItem').addClass('group-list-item');
+    $('button').addClass('btn');
+    $('button').addClass('my-button');
     button.innerText = pokemon.name;
     listItem.appendChild(button);
     container.appendChild(listItem);

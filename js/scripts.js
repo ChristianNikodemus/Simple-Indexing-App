@@ -17,10 +17,10 @@ let pokemonRepository = (function () {
     let container = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let button = document.createElement('button');
-    $('listItem').addClass('group-list-item');
-    button.innerText = pokemon.name;
     $('button').addClass('my-button');
     $('button').addClass('btn');
+    $('listItem').addClass('group-list-item');
+    button.innerText = pokemon.name;
     listItem.appendChild(button);
     container.appendChild(listItem);
 

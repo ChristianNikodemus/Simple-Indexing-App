@@ -52,14 +52,18 @@ h1 {
   font-weight: 300;
 }
 
-.list {
-  margin-top: 7em;
-}
-
 .pokemon-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.pokemon-list:first-child {
+  margin-top: 7em;
+}
+
+.pokemon-list:last-child {
+  margin-bottom: 5em;
 }
 
 .my-button {

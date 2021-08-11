@@ -37,7 +37,7 @@ body {
 
 h1 {
   font-family: var(--font-stack-secondary);
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -46,6 +46,10 @@ h1 {
   background: var(--secondary-background-color);
   margin-bottom: 0.5em;
   box-shadow: 0 4px 6px rgb(34 60 80 / 16%);
+}
+
+.navbar-text {
+  font-weight: 300;
 }
 
 .list {
@@ -136,6 +140,10 @@ h1 {
 
 .modal h1 {
   text-transform: capitalize;
+}
+
+.modal p {
+  font-size: 20px;
 }
 
 .modal-close {

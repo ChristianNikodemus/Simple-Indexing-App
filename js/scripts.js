@@ -66,6 +66,7 @@ function loadDetails(item) {
 let modalContainer = document.querySelector('#modalCenter'); // defines the modal container globally
 
 function showModal(title, text, image) {
+  //modalContainer.innerHTML = ''; // Clears all the existing modal content
   let modalBody = $('modal-body');
   let modalTitle = $('modal-title');
 

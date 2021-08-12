@@ -76,7 +76,7 @@ function showModal(title, text, image) {
   let modal = document.createElement('div');
   modal.classList.add('modal');
 
-  let titleElement = document.createElement('h1');
+  let titleElement = document.querySelector('#modalTitle');
   titleElement.innerText = title;
 
   let contentElement = document.createElement('p');

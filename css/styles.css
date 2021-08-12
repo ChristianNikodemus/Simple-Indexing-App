@@ -96,6 +96,10 @@ h1 {
           transform: scale(1.05);
 }
 
+.modal-title {
+  text-transform: capitalize;
+}
+
 /* Styling for the Modal
 
 #modal-container {

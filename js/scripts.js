@@ -63,7 +63,7 @@ function loadDetails(item) {
 }
 
 // Modal functionality
-let modalContainer = document.querySelector('#modal-container'); // defines the modal container globally
+let modalContainer = document.querySelector('#modalCenter'); // defines the modal container globally
 
 function showModal(title, text, image) {
   //modalContainer.innerHTML = ''; // Clears all the existing modal content
@@ -94,9 +94,9 @@ function showModal(title, text, image) {
   myImage.src = image;
 
   //modal.appendChild(closeButtonElement);
-  modal.appendChild(titleElement);
-  modal.appendChild(contentElement);
-  modal.appendChild(myImage);
+  modalTitle.appendChild(titleElement);
+  modalBody.appendChild(contentElement);
+  modalBody.appendChild(myImage);
   modalContainer.appendChild(modal);
 
   modalContainer.classList.add('is-visible');
@@ -119,7 +119,7 @@ modalContainer.addEventListener('click', (e) => { // Event listener for user cli
   }
 });
 
-document.querySelector('#show-modal').addEventListener('click', () => {
+document.querySelector('#modalCenter').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
 

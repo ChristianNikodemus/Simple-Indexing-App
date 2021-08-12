@@ -20,6 +20,8 @@ let pokemonRepository = (function () {
     $(listItem).addClass('group-list-item');
     $(button).addClass('btn');
     $(button).addClass('my-button');
+    $(button).data('toggle', 'modal');
+    $(button).data('target', '#exampleModalCenter');
     button.innerText = pokemon.name;
     listItem.appendChild(button);
     container.appendChild(listItem);

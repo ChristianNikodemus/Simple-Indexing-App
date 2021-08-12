@@ -66,16 +66,23 @@ function loadDetails(item) {
 let modalContainer = document.querySelector('#modal-container'); // defines the modal container globally
 
 function showModal(title, text, image) {
-  modalContainer.innerHTML = ''; // Clears all the existing modal content
+  //modalContainer.innerHTML = ''; // Clears all the existing modal content
+  let modalBody = $('.modal-body');
+  let modalTitle = $('.modal-title');
+
+  modalTitle.empty();
+  modalBody.empty();
 
   let modal = document.createElement('div');
   modal.classList.add('modal');
 
   // Adds the new modal content
+  /*
   let closeButtonElement = document.createElement('button');
   closeButtonElement.classList.add('modal-close');
   closeButtonElement.innerText = 'Close';
   closeButtonElement.addEventListener('click', hideModal);
+  */
 
   let titleElement = document.createElement('h1');
   titleElement.innerText = title;
@@ -86,7 +93,7 @@ function showModal(title, text, image) {
   let myImage = document.createElement('img');
   myImage.src = image;
 
-  modal.appendChild(closeButtonElement);
+  //modal.appendChild(closeButtonElement);
   modal.appendChild(titleElement);
   modal.appendChild(contentElement);
   modal.appendChild(myImage);

@@ -78,6 +78,7 @@ function showModal(title, text, image) {
 
   let titleElement = document.querySelector('#modalTitle');
   titleElement.innerText = title;
+  console.log(modalTitle);
 
   let contentElement = document.createElement('p');
   contentElement.innerText = text;

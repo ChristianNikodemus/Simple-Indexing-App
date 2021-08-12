@@ -86,10 +86,10 @@ function showModal(title, text, image) {
   let myImage = document.createElement('img');
   myImage.src = image;
 
-  modalTitle.appendChild(titleElement);
-  modalBody.appendChild(contentElement);
-  modalBody.appendChild(myImage);
-  modalContainer.appendChild(modal);
+  modalTitle.append(titleElement);
+  modalBody.append(contentElement);
+  modalBody.append(myImage);
+  modalContainer.append(modal);
 
   modalContainer.classList.add('is-visible');
 }

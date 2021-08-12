@@ -76,14 +76,6 @@ function showModal(title, text, image) {
   let modal = document.createElement('div');
   modal.classList.add('modal');
 
-  // Adds the new modal content
-  /*
-  let closeButtonElement = document.createElement('button');
-  closeButtonElement.classList.add('modal-close');
-  closeButtonElement.innerText = 'Close';
-  closeButtonElement.addEventListener('click', hideModal);
-  */
-
   let titleElement = document.createElement('h1');
   titleElement.innerText = title;
 

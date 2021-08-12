@@ -66,7 +66,6 @@ function loadDetails(item) {
 let modalContainer = document.querySelector('#modalCenter'); // defines the modal container globally
 
 function showModal(title, text, image) {
-  //modalContainer.innerHTML = ''; // Clears all the existing modal content
   let modalBody = $('modal-body');
   let modalTitle = $('modal-title');
 
@@ -85,7 +84,6 @@ function showModal(title, text, image) {
   let myImage = document.createElement('img');
   myImage.src = image;
 
-  //modal.appendChild(closeButtonElement);
   modalTitle.appendChild(titleElement);
   modalBody.appendChild(contentElement);
   modalBody.appendChild(myImage);
@@ -133,9 +131,6 @@ return {
   hideModal: hideModal
 };
 })();
-
-// Added Charizard to my pokemonList
-// pokemonRepository.add({ name: 'Charizard', height: 1.7, types: ['fire','flying'] });
 
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon){

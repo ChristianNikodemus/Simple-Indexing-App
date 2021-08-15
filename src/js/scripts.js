@@ -44,7 +44,7 @@ let pokemonRepository = (function () {
       add(pokemon);
     });
   }).catch(function (e) {
-    console.error(e);
+    alert('Sorry! An error has occured');
   })
 }
 

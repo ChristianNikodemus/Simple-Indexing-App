@@ -95,6 +95,10 @@ h1 {
           transform: scale(1.05);
 }
 
+.my-button:focus {
+  box-shadow: none;
+}
+
 .modal-title {
   text-transform: capitalize;
 }

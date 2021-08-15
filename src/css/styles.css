@@ -87,8 +87,7 @@ h1 {
   text-transform: capitalize;
 }
 
-.my-button:hover,
-.my-button:focus {
+.my-button:hover {
   cursor: pointer;
   opacity: 0.8;
   -webkit-transform: scale(1.05);

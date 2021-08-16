@@ -21,9 +21,9 @@ let pokemonRepository = (function () {
     $(button).addClass('my-button');
     $(button).attr('data-toggle', 'modal');
     $(button).attr('data-target', '#modalCenter');
-    button.innerText = pokemon.name;
-    listItem.append(button);
-    container.append(listItem);
+    $(button).text(pokemon.name);
+    $(listItem).append(button);
+    $(container).append(listItem);
 
     // Event listener for when a user clicks a button
     button.addEventListener('click', function () {
@@ -83,10 +83,10 @@ let pokemonRepository = (function () {
     modal.classList.add('modal');
 
     let titleElement = document.querySelector('#modalTitle');
-    titleElement.innerText = title;
+    $(titleElement).text(title);
 
     let contentElement = document.createElement('p');
-    contentElement.innerText = text;
+    $(contentElement).text(text);
 
     let myImage = document.createElement('img');
     myImage.src = image;
@@ -123,7 +123,10 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, `Height: ${pokemon.height} \nWeight: ${pokemon.weight}`, pokemon.imageUrl);
+      showModal(pokemon.name,
+        `Height: ${pokemon.height}
+        Weight: ${pokemon.weight}`,
+        pokemon.imageUrl);
     });
   }
 

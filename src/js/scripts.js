@@ -121,7 +121,9 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, `Height: ${pokemon.height} \nType: ${pokemon.types}`, pokemon.imageUrl);
+      let pokeTypes = Array.from(pokemon.types);
+      console.log(pokeTypes);
+      showModal(pokemon.name, `Height: ${pokemon.height} \nType: ${pokeTypes}`, pokemon.imageUrl);
     });
   }
 

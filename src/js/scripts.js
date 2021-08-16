@@ -60,7 +60,9 @@ let pokemonRepository = (function () {
         // Now we add the details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.types;
+        item.weight = details.weight;
+        /*item.types = details.types.map(function(x) {
+          return x.type.name;*/
       })
       .catch(function (e) {
       });
@@ -121,7 +123,7 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, `Height: ${pokemon.height} \nType: ${pokemon.types}`, pokemon.imageUrl);
+      showModal(pokemon.name, `Height: ${pokemon.height} \nWeight: ${pokemon.weight} \nTypes: ${pokemon.types}`, pokemon.imageUrl);
     });
   }
 

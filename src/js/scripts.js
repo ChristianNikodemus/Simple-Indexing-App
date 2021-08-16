@@ -22,8 +22,8 @@ let pokemonRepository = (function () {
     $(button).attr('data-toggle', 'modal');
     $(button).attr('data-target', '#modalCenter');
     button.innerText = pokemon.name;
-    listItem.appendChild(button);
-    container.appendChild(listItem);
+    listItem.append(button);
+    container.append(listItem);
 
     // Event listener for when a user clicks a button
     button.addEventListener('click', function () {

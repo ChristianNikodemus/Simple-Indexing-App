@@ -123,9 +123,7 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name,
-        `Height: ${pokemon.height}
-        Weight: ${pokemon.weight}`,
+      showModal(pokemon.name,`Height: ${pokemon.height} cm Weight: ${pokemon.weight}`,
         pokemon.imageUrl);
     });
   }

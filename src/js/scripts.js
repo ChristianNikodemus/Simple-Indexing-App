@@ -123,7 +123,7 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, `Height: ${pokemon.height} \nWeight: ${pokemon.weight} \nTypes: ${pokemon.types}`, pokemon.imageUrl);
+      showModal(pokemon.name, `Height: ${pokemon.height} \nWeight: ${pokemon.weight}`, pokemon.imageUrl);
     });
   }
 

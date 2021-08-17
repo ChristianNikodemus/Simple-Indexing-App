@@ -14,7 +14,7 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     let container = $('.pokemon-list');
-    let listItem = $.createdocument.createElement('li');
+    let listItem = document.createElement('li');
     let button = document.createElement('button');
     $(listItem).addClass('group-list-item');
     $(button).addClass('btn');
@@ -82,7 +82,7 @@ let pokemonRepository = (function () {
     let modal = document.createElement('div');
     modal.classList.add('modal');
 
-    let titleElement = document.querySelector('#modalTitle');
+    let titleElement = $('#modalTitle');
     $(titleElement).text(title);
 
     let contentElement = document.createElement('p');

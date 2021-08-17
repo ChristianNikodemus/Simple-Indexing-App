@@ -61,8 +61,9 @@ let pokemonRepository = (function () {
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
         item.weight = details.weight;
-        /*item.types = details.types.map(function(x) {
-          return x.type.name;*/
+        item.types = details.types.map(function(x) {
+          return x.type.name;
+        });
       })
       .catch(function (e) {
       });
@@ -123,7 +124,7 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name,`Height: ${pokemon.height} cm Weight: ${pokemon.weight}`,
+      showModal(pokemon.name,`Height: ${pokemon.height} cm Weight: ${pokemon.weight} Type(s): ${pokemon.types}`,
         pokemon.imageUrl);
     });
   }

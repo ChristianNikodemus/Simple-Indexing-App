@@ -13,8 +13,8 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    let container = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
+    let container = $('.pokemon-list');
+    let listItem = $.createdocument.createElement('li');
     let button = document.createElement('button');
     $(listItem).addClass('group-list-item');
     $(button).addClass('btn');

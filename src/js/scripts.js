@@ -50,6 +50,10 @@ let pokemonRepository = (function () {
       });
   }
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url)
@@ -62,15 +66,15 @@ let pokemonRepository = (function () {
         item.height = details.height;
         item.weight = details.weight;
         item.types = details.types.map(function(x) {
-          return x.type.name;
-        });
+          return capitalizeFirstLetter(x.type.name);
+        }).join(', ');
       })
       .catch(function (e) {
       });
   }
 
   // Modal functionality
-  let modalContainer = document.querySelector('#modalCenter'); // defines the modal container globally
+  let modalContainer = $('#modalCenter'); // defines the modal container globally
 
   function showModal(title, text, image) {
     //modalContainer.innerHTML = ''; // Clears all the existing modal content
@@ -87,7 +91,7 @@ let pokemonRepository = (function () {
     $(titleElement).text(title);
 
     let contentElement = document.createElement('p');
-    $(contentElement).text(text);
+    $(contentElement).html(text);
 
     let myImage = document.createElement('img');
     myImage.src = image;
@@ -110,7 +114,7 @@ let pokemonRepository = (function () {
     }
   });
 
-  modalContainer.addEventListener('click', (e) => {
+  modalContainer.on('click', (e) => {
     // Event listener for user clicking outside the modal
     let target = e.target;
     if (target === modalContainer) {
@@ -118,13 +122,15 @@ let pokemonRepository = (function () {
     }
   });
 
-  document.querySelector('#modalCenter').addEventListener('click', () => {
-    showModal('Modal title', 'This is the modal content!');
-  });
+  // document.querySelector('#modalCenter').addEventListener('click', () => {
+  //  showModal('Modal title', 'This is the modal content!');
+  // });
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name,`Height: ${pokemon.height}cm, Weight: ${pokemon.weight}, Type(s): ${pokemon.types}`,
+      showModal(pokemon.name,`Height: ${pokemon.height}cm, <br />
+      Weight: ${pokemon.weight}, <br />
+      Type(s): ${pokemon.types}`, 
         pokemon.imageUrl);
     });
   }

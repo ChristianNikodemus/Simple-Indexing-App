@@ -65,12 +65,13 @@ let pokemonRepository = (function () {
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
         item.weight = details.weight;
-        item.types = details.types.map(function(x) {
-          return capitalizeFirstLetter(x.type.name);
-        }).join(', ');
+        item.types = details.types
+          .map(function (x) {
+            return capitalizeFirstLetter(x.type.name);
+          })
+          .join(', ');
       })
-      .catch(function (e) {
-      });
+      .catch(function (e) {});
   }
 
   // Modal functionality
@@ -128,10 +129,13 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name,`Height: ${pokemon.height}cm, <br />
+      showModal(
+        pokemon.name,
+        `Height: ${pokemon.height}cm, <br />
       Weight: ${pokemon.weight}, <br />
-      Type(s): ${pokemon.types}`, 
-        pokemon.imageUrl);
+      Type(s): ${pokemon.types}`,
+        pokemon.imageUrl
+      );
     });
   }
 

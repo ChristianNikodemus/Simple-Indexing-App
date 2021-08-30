@@ -14,14 +14,11 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     let container = $('.pokemon-list');
-    let listItem = document.createElement('li');
-    let button = document.createElement('button');
-    $(listItem).addClass('group-list-item');
-    $(button).addClass('btn');
-    $(button).addClass('my-button');
-    $(button).attr('data-toggle', 'modal');
-    $(button).attr('data-target', '#modalCenter');
-    $(button).text(pokemon.name);
+    let listItem = $('<li class='group-list-item'></li>');
+    let button = $('<button class='btn my-button'></button>');
+    button.attr('data-toggle', 'modal');
+    button.attr('data-target', '#modalCenter');
+    button.text(pokemon.name);
     $(listItem).append(button);
     $(container).append(listItem);
 

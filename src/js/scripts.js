@@ -14,16 +14,13 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     let container = $('.pokemon-list');
-    let listItem = $('<li class='group-list-item'></li>');
-    let button = $('<button class='btn my-button'></button>');
-    button.attr('data-toggle', 'modal');
-    button.attr('data-target', '#modalCenter');
-    button.text(pokemon.name);
-    $(listItem).append(button);
-    $(container).append(listItem);
+    let listItem = $('<li class="group-list-item"></li>');
+    let button = $(`<button class="btn my-button" data-toggle="modal" data-target="#modalCenter">${pokemon.name}</button>`);
+    listItem.append(button);
+    container.append(listItem);
 
     // Event listener for when a user clicks a button
-    button.addEventListener('click', function () {
+    button.on('click', function () {
       showDetails(pokemon);
     });
   }
@@ -82,28 +79,23 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty();
 
-    let modal = document.createElement('div');
-    modal.classList.add('modal');
-
     let titleElement = $('#modalTitle');
-    $(titleElement).text(title);
+    titleElement.text(title);
 
-    let contentElement = document.createElement('p');
-    $(contentElement).html(text);
+    let contentElement = $('<p></p>');
+    contentElement.html(text);
 
-    let myImage = document.createElement('img');
-    myImage.src = image;
+    let myImage = $(`<img src="${image}">`);
 
     modalTitle.append(titleElement);
     modalBody.append(contentElement);
     modalBody.append(myImage);
-    modalContainer.append(modal);
 
-    modalContainer.classList.add('is-visible');
+    modalContainer.addClass('is-visible');
   }
 
   function hideModal() {
-    modalContainer.classList.remove('is-visible');
+    modalContainer.removeClass('is-visible');
   }
 
   window.addEventListener('keydown', (e) => {

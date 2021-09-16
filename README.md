@@ -1,4 +1,19 @@
-This project uses the pokemon API: https://pokeapi.co/api/v2/pokemon/?limit=150
+Welcome to a Javascript indexing app I built! This loads external data sourced from the this pokemon API: https://pokeapi.co/api/v2/pokemon/?limit=150
+
+Objective: To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
+
+Technical Features:
+- Loads data from an external API; for instance, the Pokémon API.
+- Displays a list of items loaded from that API after the page is loaded.
+- Enables the viewing of more details for a given list item (like a Pokémon) on demand, such as when clicking on a list item.
+- Contains CSS styling.
+- JavaScript code is formatted according to ESLint rules.
+- JavaScript code is formatted via the tool -- Prettier.
+- JavaScript code is also manually formatted.
+- Utulizes complex UI pattern, such as a modal.
+- Tested to not throw any errors when being used.
+- Publicly accessible on the platform -- GitHub Pages
+- Tested for Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
 
 It also incorporates the following jQuery and Bootstrap libraries:
 

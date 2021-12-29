@@ -1,7 +1,7 @@
 :root {
   /* Colours selected from Coloor (https://coolors.co/0081a7-00afb9-fdfcdc-fed9b7-f07167)*/
-  --font-stack-primary: 'Lato', sans-serif;
-  --font-stack-secondary: 'Roboto', serif;
+  --font-stack-primary: "Lato", sans-serif;
+  --font-stack-secondary: "Roboto", serif;
   --primary-color: #0081a7;
   /* Dark blue */
   --secondary-color: #00afb9;
@@ -18,7 +18,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -32,7 +32,6 @@ body {
   /* Sets all text color*/
   text-align: center;
   background-color: var(--background-color);
-
 }
 
 h1 {
@@ -77,13 +76,13 @@ h1 {
   border-radius: 0.5em;
   /* Transitions */
   -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-  transition: transform .3s cubic-bezier(.38,.41,.27,1) 0s,
-  -webkit-transform .3s cubic-bezier(.38,.41,.27,1) 0s;
+  transition: transform 0.3s cubic-bezier(0.38, 0.41, 0.27, 1) 0s,
+    -webkit-transform 0.3s cubic-bezier(0.38, 0.41, 0.27, 1) 0s;
   text-transform: capitalize;
 }
 
@@ -91,8 +90,8 @@ h1 {
   cursor: pointer;
   opacity: 0.8;
   -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .my-button:focus {

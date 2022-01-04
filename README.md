@@ -1,8 +1,13 @@
+# Simple Indexing App
+
 Welcome to a Javascript indexing app I built! This loads external data sourced from the this pokemon API: https://pokeapi.co/api/v2/pokemon/?limit=150
 
-Objective: To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
+## Objective
 
-Technical Features:
+To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
+
+### Technical Features
+
 - Loads data from an external API; for instance, the Pokémon API.
 - Displays a list of items loaded from that API after the page is loaded.
 - Enables the viewing of more details for a given list item (like a Pokémon) on demand, such as when clicking on a list item.
@@ -14,6 +19,8 @@ Technical Features:
 - Tested to not throw any errors when being used.
 - Publicly accessible on the platform -- GitHub Pages
 - Tested for Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
+
+### JQuery and Bootstrap Libraries
 
 It also incorporates the following jQuery and Bootstrap libraries:
 
